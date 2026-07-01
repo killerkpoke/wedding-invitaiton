@@ -1,65 +1,116 @@
+import FadeInOnScroll from "@/components/FadeInOnScroll";
 import Image from "next/image";
+import { ViewTransition } from "react";
 
+function MapEmbed() {
+  return (
+    <iframe
+      className="w-full h-96 rounded-lg"
+      loading="lazy"
+      src="https://www.google.com/maps?q=%C3%96reg+T%C3%B6lgy+Kast%C3%A9ly-Fogad%C3%B3&output=embed"
+    />
+  );
+}
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="max-w-4xl mx-auto text-center">
+      {/* Hero Header */}
+      <h1 className="text-5xl md:text-6xl font-bold text-orange-800 animate-fade-in">
+        Szia!
+      </h1>
+      <ViewTransition name={`photo-1`} share="morph">
+        <div className="hover-3d cursor-pointer my-18 animate-fade-in">
+          <div className="card bg-white text-white bg-[radial-gradient(circle_at_bottom_left,#ffffff04_35%,transparent_36%),radial-gradient(circle_at_top_right,#ffffff04_35%,transparent_36%)] bg-size-[4.95em_4.95em]">
+            <div className="card-body">
+              <Image
+                src="/sketch_2_weeding_inv.png"
+                alt="Hero"
+                width={2540}
+                height={1080}
+                className="w-full h-auto"
+                loading="eager"
+              />
+            </div>
+          </div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </ViewTransition>
+      <FadeInOnScroll>
+        <section className="my-12 pt-8 card bg-white text-base-content border-base-200 shadow-xl">
+          <div className="grid md:grid-cols-1 gap-6 mb-6">
+            <div className="text-center">
+              <p className="text-3xl font-semibold text-orange-900 mb-8">
+                Ceremónia | Szállás <i>(opciónális)</i>
+              </p>
+              <p className="text-lg text-orange-600 mt-4">
+                Öreg Tölgy Kastély-Fogadó
+              </p>
+              <p className="text-lg text-orange-600 mt-4 mb-8">
+                Pusztazámor, Kossuth Lajos u. 22
+              </p>
+              <MapEmbed />
+            </div>
+          </div>
+        </section>
+      </FadeInOnScroll>
+
+      {/* Schedule Section */}
+      <FadeInOnScroll>
+        <section className="fade-in-up my-12 pt-8 card bg-white border-base-300 shadow-xl">
+          <h2 className="text-3xl font-bold text-center text-orange-900 mb-6">
+            Menetrend
+          </h2>
+          <div className="space-y-4 max-w-2xl mx-auto pb-8">
+            <div className="flex items-center card bg-[#c3b091] shadow-sm p-4">
+              <div className="badge bg-[#9F2D00] border-[#9F2D00] text-white px-3 py-1 rounded-md text-sm font-semibold mr-4">
+                12:00 PM
+              </div>
+              <div>
+                <p className="font-medium text-white">Előgyülekezés</p>
+                <p className="text-sm text-white">
+                  Italozás és nasi a családdal és barátokkal
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center card bg-[#c3b091] shadow-sm p-4">
+              <div className="badge bg-[#9F2D00] border-[#9F2D00] text-white px-3 py-1 rounded-md text-sm font-semibold mr-4">
+                14:00 PM
+              </div>
+              <div>
+                <p className="font-medium text-white">Ceremónia</p>
+                <p className="text-sm text-white">
+                  Italozás és nasi a családdal és barátokkal
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center card bg-[#c3b091] shadow-sm p-4">
+              <div className="badge bg-[#9F2D00] border-[#9F2D00] text-white px-3 py-1 rounded-md text-sm font-semibold mr-4">
+                19:00 PM
+              </div>
+              <div>
+                <p className="font-medium text-white">Vacsora</p>
+                <p className="text-sm text-white">
+                  Esti vacsora a családdal és barátokkal
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </FadeInOnScroll>
+
+      {/* RSVP Button */}
+      {/*<div className="text-center mt-12">
+        <button className="btn bg-[#9F2D00] border-[#9F2D00] btn-lg btn-wide text-white rounded-full hover:shadow-xl transition-all duration-200">
+          Meghívás elfogadása!
+        </button>
+      </div>*/}
     </div>
   );
 }
