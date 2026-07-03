@@ -1,4 +1,5 @@
 import FadeInOnScroll from "@/components/FadeInOnScroll";
+import FoodCard from "@/components/FoodCard";
 import Image from "next/image";
 import { ViewTransition } from "react";
 
@@ -15,19 +16,16 @@ export default function Home() {
   return (
     <div className="max-w-4xl mx-auto text-center">
       {/* Hero Header */}
-      <h1 className="text-5xl md:text-6xl font-bold text-orange-800 animate-fade-in">
-        Szia!
-      </h1>
+
       <ViewTransition name={`photo-1`} share="morph">
-        <div className="hover-3d cursor-pointer my-18 animate-fade-in">
+        <div id="item1" className="scroll-mt-24 hover-3d cursor-pointer mb-18 animate-fade-in">
           <div className="card bg-white text-white bg-[radial-gradient(circle_at_bottom_left,#ffffff04_35%,transparent_36%),radial-gradient(circle_at_top_right,#ffffff04_35%,transparent_36%)] bg-size-[4.95em_4.95em]">
             <div className="card-body">
               <Image
                 src="/sketch_2_weeding_inv.png"
                 alt="Hero"
-                width={2540}
+                width={1920}
                 height={1080}
-                className="w-full h-auto"
                 loading="eager"
               />
             </div>
@@ -43,7 +41,7 @@ export default function Home() {
         </div>
       </ViewTransition>
       <FadeInOnScroll>
-        <section className="my-12 pt-8 card bg-white text-base-content border-base-200 shadow-xl">
+        <section id="item2" className="scroll-mt-24 mt-24 pt-8 card bg-white text-base-content border-base-200 shadow-xl">
           <div className="grid md:grid-cols-1 gap-6 mb-6">
             <div className="text-center">
               <p className="text-3xl font-semibold text-orange-900 mb-8">
@@ -63,7 +61,7 @@ export default function Home() {
 
       {/* Schedule Section */}
       <FadeInOnScroll>
-        <section className="fade-in-up my-12 pt-8 card bg-white border-base-300 shadow-xl">
+        <section id="item3" className="scroll-mt-24 my-12 pt-8 card bg-white border-base-300 shadow-xl">
           <h2 className="text-3xl font-bold text-center text-orange-900 mb-6">
             Menetrend
           </h2>
@@ -101,6 +99,67 @@ export default function Home() {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+      </FadeInOnScroll>
+
+      <FadeInOnScroll>
+        <section id="item4" className="scroll-mt-24 my-12 pt-8 card bg-white border-base-300 shadow-xl">
+          <h2 className="text-3xl font-bold text-center text-orange-900 mb-6">
+            Menü
+          </h2>
+          <div className="grid grid-cols-3 gap-3">
+            <h4 className="col-span-3 text-xl font-bold text-center text-orange-900 mb-6">
+              Vendég váró
+            </h4>
+            <FoodCard
+              foodName="Francia hagyma leves"
+              foodImage="/sketch_2_weeding_inv.png"
+            />
+          </div>
+          <div className="grid grid-cols-3 gap-3">
+            <h4 className="col-span-3 text-xl font-bold text-center text-orange-900 mb-6">
+              Leves
+            </h4>
+            <FoodCard
+              foodName="Francia hagyma leves"
+              foodImage="/sketch_2_weeding_inv.png"
+            />
+          </div>
+          <div className="grid grid-cols-3 gap-3">
+            <h4 className="col-span-3 text-xl font-bold text-center text-orange-900 mb-6">
+              Főétel
+            </h4>
+            <FoodCard
+              foodName="Francia hagyma leves"
+              foodImage="/sketch_2_weeding_inv.png"
+            />
+            <FoodCard
+              foodName="Francia hagyma leves"
+              foodImage="/sketch_2_weeding_inv.png"
+            />
+            <FoodCard
+              foodName="Francia hagyma leves"
+              foodImage="/sketch_2_weeding_inv.png"
+            />
+          </div>
+          <div className="grid grid-cols-3 gap-3">
+            <h4 className="col-span-3 text-xl font-bold text-center text-orange-900 mb-6">
+              Desszert
+            </h4>
+            <FoodCard
+              foodName="Francia hagyma leves"
+              foodImage="/sketch_2_weeding_inv.png"
+            />
+          </div>
+          <div className="grid grid-cols-3 gap-3">
+            <h4 className="col-span-3 text-xl font-bold text-center text-orange-900 mb-6">
+              Éjféli menü
+            </h4>
+            <FoodCard
+              foodName="Francia hagyma leves"
+              foodImage="/sketch_2_weeding_inv.png"
+            />
           </div>
         </section>
       </FadeInOnScroll>

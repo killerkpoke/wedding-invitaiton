@@ -22,7 +22,7 @@ export default function FadeInOnScroll({
         }
       },
       {
-        threshold: 0.70,
+        threshold: 0.10,
       }
     );
 
