@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
           <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between">
             <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
               {children}
+              <Analytics />
             </div>
           </main>
         </div>
