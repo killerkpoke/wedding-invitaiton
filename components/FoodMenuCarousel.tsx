@@ -89,7 +89,7 @@ export default function FoodMenuCarousel() {
             </div>
 
             {/* LEFT / RIGHT ARROWS */}
-            <div className="absolute left-5 right-5 top-[11%] flex -translate-y-1/2 transform justify-between">
+            <div className="absolute left-5 right-5 top-[3.5%] md:top-[5%] lg:top-[10%] flex -translate-y-1/2 transform justify-between">
               <a href={`#${prev}`} className="btn btn-circle bg-[#9F2D00] border-[#9F2D00] btn-sm opacity-70 hover:opacity-100">
                 ❮
               </a>

@@ -33,7 +33,7 @@ export default function FadeInOnScroll({
   return (
     <div
       ref={ref}
-      className={visible ? "animate-fade-in-up" : "opacity-0"}
+      className={`max-w-[350px] sm:max-w-[380px] md:max-w-[900px] justify-center ${visible ? "animate-fade-in-up" : "opacity-0"}`}
     >
       {children}
     </div>
