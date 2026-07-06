@@ -1,4 +1,5 @@
 import FadeInOnScroll from "@/components/FadeInOnScroll";
+import FoodMenuCarousel from "@/components/FoodMenuCarousel";
 import FoodCard from "@/components/FoodCard";
 import Image from "next/image";
 import { ViewTransition } from "react";
@@ -108,8 +109,9 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center text-orange-900 mb-6">
             Menü
           </h2>
-          <div className="grid grid-cols-3 gap-3">
-            <h4 className="col-span-3 text-xl font-bold text-center text-orange-900 mb-6">
+          <FoodMenuCarousel />
+          {/*<div className="flex flex-1 flex-col items-center justify-center">
+            <h4 className="col-span-3 -bold text-center text-orange-900 mb-6">
               Vendég váró
             </h4>
             <FoodCard
@@ -117,8 +119,8 @@ export default function Home() {
               foodImage="/sketch_2_weeding_inv.png"
             />
           </div>
-          <div className="grid grid-cols-3 gap-3">
-            <h4 className="col-span-3 text-xl font-bold text-center text-orange-900 mb-6">
+          <div className="flex flex-1 flex-col items-center justify-center mt-6">
+            <h4 className="col-span-3 -bold text-center text-orange-900 mb-6">
               Leves
             </h4>
             <FoodCard
@@ -126,7 +128,7 @@ export default function Home() {
               foodImage="/sketch_2_weeding_inv.png"
             />
           </div>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="flex flex-1 flex-col items-center justify-center mt-6">
             <h4 className="col-span-3 text-xl font-bold text-center text-orange-900 mb-6">
               Főétel
             </h4>
@@ -143,7 +145,7 @@ export default function Home() {
               foodImage="/sketch_2_weeding_inv.png"
             />
           </div>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="flex flex-1 flex-col items-center justify-center mt-6">
             <h4 className="col-span-3 text-xl font-bold text-center text-orange-900 mb-6">
               Desszert
             </h4>
@@ -152,7 +154,7 @@ export default function Home() {
               foodImage="/sketch_2_weeding_inv.png"
             />
           </div>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="flex flex-1 flex-col items-center justify-center mt-6">
             <h4 className="col-span-3 text-xl font-bold text-center text-orange-900 mb-6">
               Éjféli menü
             </h4>
@@ -160,7 +162,7 @@ export default function Home() {
               foodName="Francia hagyma leves"
               foodImage="/sketch_2_weeding_inv.png"
             />
-          </div>
+          </div>*/}
         </section>
       </FadeInOnScroll>
 

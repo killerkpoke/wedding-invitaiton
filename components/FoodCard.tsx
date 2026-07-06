@@ -7,23 +7,26 @@ export default function FoodCard({
 }: {
   foodName: string;
   foodImage: string;
-  }) {
+}) {
   const foodNameIndex = foodName.replace(/\s+/g, " ").toLowerCase();
-  
+
   return (
-    <div className="flex items-center card bg-[#c3b091] shadow-sm m-4">
-      <div className="badge bg-[#9F2D00] border-[#9F2D00] rounded-md font-semibold my-2">
-        <p className="font-bold text-lg text-white">
-          {foodName}
-        </p>
+    <div className="card max-w-xs bg-[#9F2D00] shadow-sm">
+      <div className="card-body">
+        <h2 className="card-title">{foodName}</h2>
       </div>
-      <Image
-        src={foodImage}
-        alt={`Food_${foodNameIndex}`}
-        width={512}
-        height={512}
-        loading="eager"
-      />
+      <figure className="relative w-full aspect-square">
+        <Image
+          src={foodImage}
+          alt={`Food_${foodNameIndex}`}
+          width={282}
+          height={395}
+
+          loading="eager"
+
+          className="object-cover"
+        />
+      </figure>
     </div>
   );
 }

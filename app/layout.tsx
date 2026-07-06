@@ -28,8 +28,8 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
-      <Navbar />
       <body className="min-h-full flex flex-col">
+        <Navbar />
         <div className="flex flex-col flex-1 items-center justify-center font-sans">
           <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between">
             <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
