@@ -7,7 +7,7 @@ const categories = [
     foods: [
       {
         name: "Francia hagyma leves",
-        image: "/sketch_2_weeding_inv.png",
+        image: "/soup1.jpg",
       },
     ],
   },
@@ -17,15 +17,15 @@ const categories = [
     foods: [
       {
         name: "Zöldfűszeres camembert, olivával és dióval",
-        image: "/sketch_2_weeding_inv.png",
+        image: "/lunch1.png",
       },
       {
         name: "Lazacfilé citrommal és vajjal",
-        image: "/sketch_2_weeding_inv.png",
+        image: "/lunch2.jpg",
       },
       {
         name: "Roast beef héjában sült burgonyával és zöldségekkel",
-        image: "/sketch_2_weeding_inv.png",
+        image: "/lunch3.jpg",
       },
     ],
   },
@@ -35,7 +35,7 @@ const categories = [
     foods: [
       {
         name: "Bográcsgulyás",
-        image: "/sketch_2_weeding_inv.png",
+        image: "/dinner1.jpg",
       },
     ],
   },
@@ -45,7 +45,7 @@ const categories = [
     foods: [
       {
         name: "Brownie",
-        image: "/sketch_2_weeding_inv.png",
+        image: "/dessert1.jpg",
       },
     ],
   },

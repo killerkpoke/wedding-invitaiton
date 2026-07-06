@@ -1,6 +1,5 @@
 import FadeInOnScroll from "@/components/FadeInOnScroll";
 import FoodMenuCarousel from "@/components/FoodMenuCarousel";
-import FoodCard from "@/components/FoodCard";
 import Image from "next/image";
 import { ViewTransition } from "react";
 
@@ -19,16 +18,22 @@ export default function Home() {
       {/* Hero Header */}
 
       <ViewTransition name={`photo-1`} share="morph">
-        <div id="item1" className="scroll-mt-24 hover-3d cursor-pointer mb-18 animate-fade-in">
+        <div
+          id="item1"
+          className="scroll-mt-24 hover-3d cursor-pointer mb-18 animate-fade-in"
+        >
           <div className="card bg-white text-white bg-[radial-gradient(circle_at_bottom_left,#ffffff04_35%,transparent_36%),radial-gradient(circle_at_top_right,#ffffff04_35%,transparent_36%)] bg-size-[4.95em_4.95em]">
             <div className="card-body">
-              <Image
-                src="/sketch_2_weeding_inv.png"
-                alt="Hero"
-                width={1920}
-                height={1080}
-                loading="eager"
-              />
+              <div className="w-full max-w-[280px] sm:max-w-[380px] md:max-w-[900px] mx-auto">
+                <Image
+                  src="/sketch_2_weeding_inv.png"
+                  alt="Hero"
+                  width={900}
+                  height={1260}
+                  loading="eager"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
             </div>
           </div>
           <div></div>
@@ -42,16 +47,19 @@ export default function Home() {
         </div>
       </ViewTransition>
       <FadeInOnScroll>
-        <section id="item2" className="scroll-mt-24 mt-24 pt-8 card bg-white text-base-content border-base-200 shadow-xl">
-          <div className="grid md:grid-cols-1 gap-6 mb-6">
-            <div className="text-center">
-              <p className="text-3xl font-semibold text-orange-900 mb-8">
+        <section
+          id="item2"
+          className="scroll-mt-24 mt-12 md:mt-24 pt-6 md:pt-8 card bg-white text-base-content border-base-200 shadow-xl"
+        >
+          <div className="grid md:grid-cols-1 gap-4 md:gap-6 mb-6">
+            <div className="text-center px-2">
+              <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-orange-900 mb-4 md:mb-8">
                 Ceremónia | Szállás <i>(opciónális)</i>
               </p>
-              <p className="text-lg text-orange-600 mt-4">
+              <p className="text-base sm:text-lg text-orange-600 mt-4">
                 Öreg Tölgy Kastély-Fogadó
               </p>
-              <p className="text-lg text-orange-600 mt-4 mb-8">
+              <p className="text-base sm:text-lg text-orange-600 mt-2 md:mt-4 mb-4 md:mb-8">
                 Pusztazámor, Kossuth Lajos u. 22
               </p>
               <MapEmbed />
@@ -62,7 +70,10 @@ export default function Home() {
 
       {/* Schedule Section */}
       <FadeInOnScroll>
-        <section id="item3" className="scroll-mt-24 my-12 pt-8 card bg-white border-base-300 shadow-xl">
+        <section
+          id="item3"
+          className="scroll-mt-24 my-12 pt-8 card bg-white border-base-300 shadow-xl"
+        >
           <h2 className="text-3xl font-bold text-center text-orange-900 mb-6">
             Menetrend
           </h2>
@@ -105,64 +116,14 @@ export default function Home() {
       </FadeInOnScroll>
 
       <FadeInOnScroll>
-        <section id="item4" className="scroll-mt-24 my-12 pt-8 card bg-white border-base-300 shadow-xl">
-          <h2 className="text-3xl font-bold text-center text-orange-900 mb-6">
+        <section
+          id="item4"
+          className="scroll-mt-24 my-8 md:my-12 pt-6 md:pt-8 card bg-white border-base-300 shadow-xl"
+        >
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-orange-900 mb-4 md:mb-6">
             Menü
           </h2>
           <FoodMenuCarousel />
-          {/*<div className="flex flex-1 flex-col items-center justify-center">
-            <h4 className="col-span-3 -bold text-center text-orange-900 mb-6">
-              Vendég váró
-            </h4>
-            <FoodCard
-              foodName="Francia hagyma leves"
-              foodImage="/sketch_2_weeding_inv.png"
-            />
-          </div>
-          <div className="flex flex-1 flex-col items-center justify-center mt-6">
-            <h4 className="col-span-3 -bold text-center text-orange-900 mb-6">
-              Leves
-            </h4>
-            <FoodCard
-              foodName="Francia hagyma leves"
-              foodImage="/sketch_2_weeding_inv.png"
-            />
-          </div>
-          <div className="flex flex-1 flex-col items-center justify-center mt-6">
-            <h4 className="col-span-3 text-xl font-bold text-center text-orange-900 mb-6">
-              Főétel
-            </h4>
-            <FoodCard
-              foodName="Francia hagyma leves"
-              foodImage="/sketch_2_weeding_inv.png"
-            />
-            <FoodCard
-              foodName="Francia hagyma leves"
-              foodImage="/sketch_2_weeding_inv.png"
-            />
-            <FoodCard
-              foodName="Francia hagyma leves"
-              foodImage="/sketch_2_weeding_inv.png"
-            />
-          </div>
-          <div className="flex flex-1 flex-col items-center justify-center mt-6">
-            <h4 className="col-span-3 text-xl font-bold text-center text-orange-900 mb-6">
-              Desszert
-            </h4>
-            <FoodCard
-              foodName="Francia hagyma leves"
-              foodImage="/sketch_2_weeding_inv.png"
-            />
-          </div>
-          <div className="flex flex-1 flex-col items-center justify-center mt-6">
-            <h4 className="col-span-3 text-xl font-bold text-center text-orange-900 mb-6">
-              Éjféli menü
-            </h4>
-            <FoodCard
-              foodName="Francia hagyma leves"
-              foodImage="/sketch_2_weeding_inv.png"
-            />
-          </div>*/}
         </section>
       </FadeInOnScroll>
 
