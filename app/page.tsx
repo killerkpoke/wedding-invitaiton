@@ -27,7 +27,7 @@ export default function Home() {
             <div className="card-body">
               <div className="w-full max-w-[280px] sm:max-w-[380px] md:max-w-[900px] mx-auto">
                 <Image
-                  src="/sketch_2_weeding_inv.png"
+                  src="/sketch_4_weeding_inv.jpg"
                   alt="Hero"
                   width={900}
                   height={1260}
