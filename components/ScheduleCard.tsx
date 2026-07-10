@@ -1,18 +1,18 @@
 "use client";
 export default function ScheduleCard({
-  key,
+  id,
   time,
   mainEvent,
   description
 }: {
-  key: string
+  id: string
   time: string;
   mainEvent: string;
   description: string;
 }) {
 
   return (
-    <div id={`event-${key}`} className="flex items-center card bg-[#c3b091] shadow-sm p-4">
+    <div id={`event-${id}`} className="flex items-center card bg-[#c3b091] shadow-sm p-4">
       <div className="badge bg-[#9F2D00] border-[#9F2D00] text-white px-3 py-1 rounded-md text-sm font-semibold mr-4">
         { time }
       </div>

@@ -19,12 +19,10 @@ export default function FoodCard({
         <Image
           src={foodImage}
           alt={`Food_${foodNameIndex}`}
+          loading="eager"
+          className="object-cover"
           width={282}
           height={395}
-
-          loading="eager"
-
-          className="object-cover"
         />
       </figure>
     </div>

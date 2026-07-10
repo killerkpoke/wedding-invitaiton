@@ -19,6 +19,7 @@ export default function ScheduleTimeline() {
     {timeline.map((item, index) => (
       <ScheduleCard
         key={index.toString()}
+        id={index.toString()}
         time={item.time}
         mainEvent={item.mainEvent}
         description={item.description}
