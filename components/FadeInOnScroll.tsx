@@ -22,8 +22,8 @@ export default function FadeInOnScroll({
         }
       },
       {
-        threshold: 0.10,
-      }
+        threshold: 0.1,
+      },
     );
 
     observer.observe(el);
@@ -33,7 +33,7 @@ export default function FadeInOnScroll({
   return (
     <div
       ref={ref}
-      className={`max-w-[350px] sm:max-w-[380px] md:max-w-[900px] justify-center ${visible ? "animate-fade-in-up" : "opacity-0"}`}
+      className={`max-w-[350px] sm:max-w-[380px] md:max-w-[900px] mx-auto ${visible ? "animate-fade-in-up" : "opacity-0"}`}
     >
       {children}
     </div>

@@ -15,9 +15,15 @@ function MapEmbed() {
 }
 export default function Home() {
   return (
-    <div className="max-w-4xl mx-auto text-center">
-      {/* Hero Header */}
-
+    <div className="max-w-4xl mx-auto font-semibold text-center">
+      <h1 className="text-orange-900 text-2xl lg:text-4xl mt-8 px-8">
+        Kedves Családunk és Barátaink!
+      </h1>
+      <p className="text-orange-900 text-lg pt-6 px-4">
+        Nagyon örülünk, hogy életünk egyik legfontosabb napját veletek
+        ünnepelhetjük. Az oldalon minden fontos információt megtaláltok a nagy
+        napról.
+      </p>
       <ViewTransition name={`photo-1`} share="morph">
         <div
           id="item1"
