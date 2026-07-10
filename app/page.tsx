@@ -1,5 +1,6 @@
 import FadeInOnScroll from "@/components/FadeInOnScroll";
 import FoodMenuCarousel from "@/components/FoodMenuCarousel";
+import ScheduleTimeline from "@/components/ScheduleTimeline";
 import Image from "next/image";
 import { ViewTransition } from "react";
 
@@ -78,39 +79,7 @@ export default function Home() {
             Menetrend
           </h2>
           <div className="space-y-4 max-w-2xl mx-auto pb-8">
-            <div className="flex items-center card bg-[#c3b091] shadow-sm p-4">
-              <div className="badge bg-[#9F2D00] border-[#9F2D00] text-white px-3 py-1 rounded-md text-sm font-semibold mr-4">
-                12:00 PM
-              </div>
-              <div>
-                <p className="font-medium text-white">Előgyülekezés</p>
-                <p className="text-sm text-white">
-                  Italozás és nasi a családdal és barátokkal
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center card bg-[#c3b091] shadow-sm p-4">
-              <div className="badge bg-[#9F2D00] border-[#9F2D00] text-white px-3 py-1 rounded-md text-sm font-semibold mr-4">
-                14:00 PM
-              </div>
-              <div>
-                <p className="font-medium text-white">Ceremónia</p>
-                <p className="text-sm text-white">
-                  Italozás és nasi a családdal és barátokkal
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center card bg-[#c3b091] shadow-sm p-4">
-              <div className="badge bg-[#9F2D00] border-[#9F2D00] text-white px-3 py-1 rounded-md text-sm font-semibold mr-4">
-                19:00 PM
-              </div>
-              <div>
-                <p className="font-medium text-white">Vacsora</p>
-                <p className="text-sm text-white">
-                  Esti vacsora a családdal és barátokkal
-                </p>
-              </div>
-            </div>
+            <ScheduleTimeline />
           </div>
         </section>
       </FadeInOnScroll>
