@@ -7,8 +7,8 @@ const timeline = [
   { time: "15:00", mainEvent: "Ceremónia", description: "" },
   { time: "16:00", mainEvent: "Gratulációk", description: "pezsgős koccintás és csoportképek" },
   // { time: "17:00", mainEvent: "TBD", description: "Programok, játékok" },
-  { time: "19:00", mainEvent: "Köszöntők és vacsora", description: "" },
-  { time: "20:30", mainEvent: "Torta vágás", description: "" },
+  { time: "18:00", mainEvent: "Köszöntők és vacsora", description: "" },
+  { time: "20:00", mainEvent: "Torta vágás", description: "" },
   { time: "00:00", mainEvent: "Éjféli vacsora és Buli", description: "" },
 ];
 
